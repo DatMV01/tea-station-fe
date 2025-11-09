@@ -88,6 +88,27 @@
   --color-info: var(--info);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+
+    /* Primary */
+  --color-primary-50: hsl(150, 66%, 96%); /* #EEFBF5 */
+  --color-primary-100: hsl(150, 64%, 91%); /* #D5F6E5 */
+  --color-primary-200: hsl(150, 60%, 80%); /* #AEECCF */
+  --color-primary-300: hsl(150, 55%, 67%); /* #79DCB4 */
+  --color-primary-400: hsl(150, 51%, 52%); /* #43C494 */
+  --color-primary-500: hsl(150, 69%, 42%); /* #22B684 */
+  --color-primary-600: hsl(150, 74%, 30%); /* #128963 */
+  --color-primary-700: hsl(150, 75%, 24%); /* #0F6D51 */
+  --color-primary-900: hsl(160, 65%, 17%); /* #0D4738 */
+  --color-primary-950: hsl(160, 73%, 9%);  /* #062820 */
+
+  /* Neutral */
+  --color-neutral-50: hsl(210, 14%, 98%);  /* #F7F8F9 */
+  --color-neutral-100: hsl(210, 20%, 93%); /* #E7EAEE */
+  --color-neutral-200: hsl(210, 22%, 85%); /* #D0D5DD */
+  --color-neutral-500: hsl(217, 20%, 58%); /* #64748B */
+  --color-neutral-600: hsl(217, 18%, 54%); /* #4B5768 */
+  --color-neutral-700: hsl(217, 17%, 40%); /* #323A46 */
+  --color-neutral-800: hsl(220, 14%, 12%); /* #191D23 */
 }
 
 /* BASE STYLES */
@@ -102,13 +123,38 @@
     color: var(--foreground);
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-base font-inter overflow-x-clip;
+  }
+
+  p {
+    @apply text-sm leading-7 font-inter;
+  }
+
   button {
-    cursor: pointer;
+    @apply px-1 py-1 border cursor-pointer;
+  }
+
+  li {
+    @apply text-xs font-inter lg:text-base text-neutral-500;
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+ 
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  width: 100%;
+  overflow-x: clip;
+
+  @media (min-width: theme("screens.md")) {
+    padding-inline: 4.5rem;
+    padding-block: 3rem;
+  }
+}
