@@ -43,6 +43,15 @@
   }
 }
 
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 /* ------------------ ANIMATION UTILITIES ------------------ */
 @layer utilities {
@@ -58,12 +67,19 @@
     animation: fadeInUp 0.9s ease-out forwards;
   }
 
-    .animate-fadeInDown {
+  .animate-fadeInDown {
     animation: fadeInDown 0.9s ease-out forwards;
   }
 
   .animate-fadeInLeft {
     animation: fadeInLeft 0.9s ease-out forwards;
+  }
+
+  .animate-moveLeft {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    animation: moveLeft 20s linear infinite;
   }
 
   /* Delay Utilities */
