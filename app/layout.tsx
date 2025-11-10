@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Lobster, Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/context";
+import { AOSProvider, ThemeProvider } from "@/features";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +34,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${inter.variable} ${lobster.variable} font-inter antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <AOSProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </AOSProvider>
       </body>
     </html>
   );

@@ -14,4 +14,8 @@
     cursor-pointer text-neutral-700 hover:text-neutral-800;
   }
 
+  .btn{
+    @apply flex items-center justify-center gap-2 px-4 py-2 text-sm tracking-wider text-white transition-colors duration-300 bg-primary-900 hover:bg-primary-700 border-primary-900 font-inter lg:py-3 lg:px-9;
+  }
+  
 }
