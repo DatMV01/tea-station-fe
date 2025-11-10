@@ -18,6 +18,9 @@ import ContactSection from "./sections/contact/ContactSection";
 
 import { ThemeButton, ThemeSwitch } from "@/features/theme";
 
+import NavBar from "./nav/NavBar";
+import TopSidebar from "./nav/TopSidebar";
+
 export {
   Switch,
   Container,
@@ -35,4 +38,5 @@ export {
   StatsSection,
   StorySection,
   ContactSection,
+  NavBar,TopSidebar
 };

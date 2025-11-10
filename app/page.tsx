@@ -17,7 +17,7 @@ export default function Main() {
   return (
     <>
       <Header />
-      <Sidebar />
+ 
       <main>
         <HeroSection />
         <PartnerLogosSection />

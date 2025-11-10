@@ -1,9 +1,17 @@
 @import "tailwindcss";
-@import "../features/theme/styles/theme.css"; 
-@import "../styles/animate.css"; 
+@import "../features/theme/styles/theme.css";
+@import "../styles/animate.css";
 
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-inter: var(--font-inter);
   --font-lobster: var(--font-lobster);
+}
+
+@layer components {
+  .navLink {
+    @apply text-base font-medium leading-none capitalize tracking-wide
+    cursor-pointer text-neutral-700 hover:text-neutral-800;
+  }
+
 }
