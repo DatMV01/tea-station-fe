@@ -1,10 +1,36 @@
+"use client";
+
 import { Container } from "@/components";
 import { assets } from "@/constants";
-import clsx from "clsx";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+import "./style.css";
 
 const PartnerLogosSection = () => {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const scrollerInnerRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    const reducedMotion = !window.matchMedia("(prefers-reduced-motion: reduce)")
+      .matches;
+
+    if (reducedMotion && scrollerRef.current) {
+      scrollerRef.current.setAttribute("data-animated", String(true));
+    }
+
+    const scrollerInner = scrollerInnerRef.current;
+    if (!scrollerInner) return;
+
+    Array.from(scrollerInner.children).forEach((item) => {
+      const clone = item.cloneNode(true) as HTMLElement;
+      clone.setAttribute("aria-hidden", "true");
+      scrollerInner.appendChild(clone);
+    });
+  }, []);
+
   return (
     <Container as="section" className="flex flex-col" id="partner-logos">
+      {/* Header */}
       <div data-aos="fade-right" className="mt-10">
         <h2 className="text-xs font-medium uppercase font-inter text-primary-900">
           Có mặt tại
@@ -17,10 +43,27 @@ const PartnerLogosSection = () => {
         </h1>
       </div>
 
-      <div className={clsx("flex gap-4 mt-9 md:mt-16", "animate-moveLeft")}>
-        {assets.partnerLogos.map((logo, idx) => (
-          <img key={idx} src={logo.src} alt={logo.alt} className="h-10" />
-        ))}
+      {/* Scrolling logo area */}
+      <div
+        ref={scrollerRef}
+        className="scroller"
+        data-direction="left"
+        data-speed="medium"
+      >
+        <ul ref={scrollerInnerRef} className="scroller__inner">
+          {assets.partnerLogos.map((logo, idx) => (
+            <li key={idx} className="flex items-center justify-center px-6">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={120}
+                height={40}
+                unoptimized
+                className="h-10 w-auto object-contain"
+              />
+            </li>
+          ))}
+        </ul>
       </div>
     </Container>
   );

@@ -21,7 +21,7 @@ const icons = {
 };
 
 export const partnerLogoBasePath = "/assets/partner-logos/";
-export const _partnerLogos = [
+export const partnerLogos = [
   { src: partnerLogoBasePath + "costco.png", alt: "Costco Logo" },
   { src: partnerLogoBasePath + "kroger.png", alt: "Kroger Logo" },
   { src: partnerLogoBasePath + "meijer.png", alt: "Meijer Logo" },
@@ -35,8 +35,7 @@ export const _partnerLogos = [
     alt: "Whole Foods Logo",
   },
 ];
-const partnerLogos = [_partnerLogos, ..._partnerLogos, ..._partnerLogos];
-
+ 
 const assets = { images, icons, partnerLogos };
 
 export default assets;

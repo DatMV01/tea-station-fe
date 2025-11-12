@@ -1,0 +1,47 @@
+.scroller {
+  margin: 1rem 0;
+}
+
+.scroller__inner {
+  display: flex;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  flex-wrap: nowrap;
+  animation: scroll var(--animation-duration, 30s)
+    var(--animation-direction, forwards) linear infinite;
+  width: max-content;
+}
+
+.scroller[data-direction="right"] {
+  --animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --animation-direction: forwards;
+}
+
+.scroller[data-speed="slow"] {
+  --animation-duration: 90s;
+}
+
+.scroller[data-speed="medium"] {
+  --animation-duration: 60s;
+}
+
+.scroller[data-speed="fast"] {
+  --animation-duration: 30s;
+}
+
+@keyframes scroll {
+  100% {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
