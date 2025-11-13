@@ -18,7 +18,7 @@ export default function Main() {
   return (
     <>
       <Header />
- 
+
       <main>
         <HeroSection />
         <PartnerLogosSection />
@@ -31,7 +31,7 @@ export default function Main() {
         <ContactSection />
         <DemoAOS />
       </main>
-      
+
       <Footer />
     </>
   );

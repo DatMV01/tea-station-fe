@@ -14,8 +14,59 @@
     cursor-pointer text-neutral-700 hover:text-neutral-800;
   }
 
-  .btn{
+  .btn {
     @apply flex items-center justify-center gap-2 px-4 py-2 text-sm tracking-wider text-white transition-colors duration-300 bg-primary-900 hover:bg-primary-700 border-primary-900 font-inter lg:py-3 lg:px-9;
   }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-linear-to-l from-primary-500 to-primary-900 before:content-['_'] after:content-['_'];
+  }
+
+  .sub_heading {
+    @apply text-xs font-medium uppercase font-inter text-primary-900;
+  }
+
+  .main_heading {
+    @apply mt-2 text-2xl tracking-wide capitalize lg:text-3xl font-lobster;
+  }
+
+  .tab-link {
+    @apply font-semibold hover:text-primary-700;
+
+    span {
+      @apply md:hidden inline;
+    }
+  }
   
+  .productImg {
+    @apply w-full md:w-1/2  h-[250px] md:h-[700px] md:rounded-tr-[80px] md:rounded-br-[80px] object-cover;
+  }
+}
+
+@layer utilities {
+   /* Products */
+  .tabContainer {
+    @apply flex flex-col w-full gap-8 md:flex-row md:gap-16;
+
+    > div {
+      @apply w-full my-auto;
+    }
+
+    h3 {
+      @apply text-3xl font-bold capitalize lg:text-4xl;
+    }
+
+    h4 {
+      @apply mt-4 text-xl font-semibold text-primary-900 md:mt-8;
+    }
+
+    p {
+      @apply max-w-xl mt-2;
+    }
+
+    button {
+      @apply flex-none mt-4 md:mt-8;
+    }
+  }
+
 }

@@ -1,16 +1,16 @@
 import { Container } from "@/components";
-import Image from "next/image";
 import { assets } from "@/constants";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
     <Container
       as="section"
       fluid
-      className="h-screen   bg-linear-to-t from-primary-100 to-white"
+      className="h-screen bg-linear-to-t from-primary-100 to-white"
       id="hero"
     >
-      <Container className="flex   w-full h-full relative">
+      <Container className="flex w-full h-full relative">
         <div className="z-10 flex flex-col items-center justify-center gap-4 md:gap-9 xl:items-start">
           <div>
             <h2
@@ -18,9 +18,7 @@ const HeroSection = () => {
               className="mb-2 text-xs font-semibold leading-none tracking-wider text-center uppercase font-inter md:text-sm xl:text-start"
             >
               hơn
-              <span className="text-xs text-primary-500 md:text-sm  before:content-['_'] after:content-['_']">
-                một trăm
-              </span>
+              <span className="text-gradient">một trăm</span>
               hương vị trà
             </h2>
             <h1

@@ -1,4 +1,5 @@
 import Container from "./shared/Container";
+import TabsSlide from "./shared/TabsSlide";
 
 import Switch from "./ui/Switch";
 
@@ -24,6 +25,7 @@ import TopSidebar from "./nav/TopSidebar";
 export {
   Switch,
   Container,
+  TabsSlide,
   ThemeButton,
   ThemeSwitch,
   Header,

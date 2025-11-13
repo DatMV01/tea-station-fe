@@ -3,6 +3,10 @@ import banner2 from "@/public/assets/banners/banner2.jpg";
 import banner3 from "@/public/assets/banners/banner3.jpg";
 import banner4 from "@/public/assets/banners/banner4.jpg";
 import hero_img from "@/public/assets/hero_img.png";
+import product1 from '@/public/assets/product_1.jpg'
+import product2 from '@/public/assets/product_2.jpg'
+import product3 from '@/public/assets/product_3.jpg'
+import product4 from '@/public/assets/product_4.png'
 
 import logo from "@/public/assets/logo.png";
 import rightArrow from "@/public/assets/right-arrow.svg";
@@ -13,6 +17,10 @@ const images = {
   banner3,
   banner4,
   hero_img,
+  product1,
+  product2,
+  product3,
+  product4
 };
 
 const icons = {
