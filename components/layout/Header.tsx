@@ -25,7 +25,7 @@ const Header = () => {
       id="header"
       className="fixed left-1/2 -translate-x-1/2 top-0 z-50"
     >
-      <div className="flex h-20 items-center justify-between">
+      <div className="flex h-20 bg-white/50 px-4 items-center justify-between">
         <LeftHeader />
 
         <NavBar />
