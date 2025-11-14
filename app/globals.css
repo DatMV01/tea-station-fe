@@ -9,15 +9,12 @@
 }
 
 @layer components {
-  .navLink {
-    @apply text-base font-medium leading-none capitalize tracking-wide
-    cursor-pointer text-neutral-700 hover:text-neutral-800;
-  }
-
   .btn {
     @apply flex items-center justify-center gap-2 px-4 py-2 text-sm tracking-wider text-white transition-colors duration-300 bg-primary-900 hover:bg-primary-700 border-primary-900 font-inter lg:py-3 lg:px-9;
   }
+}
 
+@layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent bg-linear-to-l from-primary-500 to-primary-900 before:content-['_'] after:content-['_'];
   }
@@ -37,14 +34,16 @@
       @apply md:hidden inline;
     }
   }
-  
+
+  .navLink {
+    @apply text-base font-medium leading-none capitalize tracking-wide
+    cursor-pointer text-neutral-700 hover:text-neutral-800;
+  }
+
   .productImg {
     @apply w-full md:w-1/2  h-[250px] md:h-[700px] md:rounded-tr-[80px] md:rounded-br-[80px] object-cover;
   }
-}
 
-@layer utilities {
-   /* Products */
   .tabContainer {
     @apply flex flex-col w-full gap-8 md:flex-row md:gap-16;
 
@@ -68,5 +67,12 @@
       @apply flex-none mt-4 md:mt-8;
     }
   }
+  
+  #features h3 {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2    whitespace-nowrap group-hover:-translate-y-12 transition-transform duration-500 uppercase;
+  }
 
+  #features p {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 text-center transition-transform duration-500 opacity-0 inline-flex w-full group-hover:opacity-100 group-hover:translate-y-5;
+  }
 }
