@@ -31,7 +31,7 @@ const PartnerLogosSection = () => {
   return (
     <Container as="section" className="flex flex-col" id="partner-logos">
       {/* Header */}
-      <div data-aos="fade-right" className="mt-10">
+      <div data-aos="fade-right">
         <h2 className="text-xs font-medium uppercase font-inter text-primary-900">
           Có mặt tại
         </h2>

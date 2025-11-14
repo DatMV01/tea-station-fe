@@ -33,7 +33,7 @@ const Container = ({
       : breakpoints["2xl"];
 
   return (
-    <Comp className={clsx("mx-auto w-full px-4", maxWidth, className)} id={id}>
+    <Comp className={clsx("mx-auto w-full px-4 my-5", maxWidth, className)} id={id}>
       {children}
     </Comp>
   );

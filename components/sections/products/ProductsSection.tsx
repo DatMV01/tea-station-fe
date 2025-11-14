@@ -152,7 +152,7 @@ const tabs = [
 
 const ProductsSection = () => {
   return (
-    <Container as="section" className="h-screen flex flex-col" id="products">
+    <Container as="section" className="flex flex-col" id="products">
       <div data-aos="fade-right" >
         <h2 className="sub_heading">Tìm hiểu</h2>
         <h1 className="main_heading">
