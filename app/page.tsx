@@ -1,7 +1,6 @@
 import {
   Header,
   Footer,
-  Sidebar,
   HeroSection,
   PartnerLogosSection,
   ProductsSection,
@@ -12,7 +11,6 @@ import {
   StorySection,
   ContactSection,
 } from "@/components";
-import DemoAOS from "@/features/aos/components/DemoAOS";
 
 export default function Main() {
   return (
@@ -29,7 +27,6 @@ export default function Main() {
         <StatsSection />
         <StorySection />
         <ContactSection />
-        <DemoAOS />
       </main>
 
       <Footer />
