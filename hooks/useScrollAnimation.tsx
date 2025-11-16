@@ -31,13 +31,18 @@ function useScrollAnimation<T extends HTMLElement>({
       if (entry.isIntersecting) {
         onEnter?.();
 
-        element.classList.add(animationClass);
+        if (animationClass && animationClass !== "") {
+          element.classList.add(animationClass);
+        }
+
         if (once) observer.unobserve(element);
       } else {
         onLeave?.();
 
         // remove class in order to animation can re-run
-        if (!once) element.classList.remove(animationClass);
+        if (!once && animationClass !== "") {
+          element.classList.remove(animationClass);
+        }
       }
     }, options);
 

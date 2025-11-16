@@ -85,4 +85,14 @@
   #best-sellers img {
     @apply max-w-[600px] h-[250px] md:h-[70vh] max-h-[700px] rounded-tl-[50px] rounded-bl-[50px] object-cover;
   }
+
+  .stats-item {
+    h1 {
+      @apply text-6xl lg:text-8xl font-lobster text-center tracking-wider leading-none font-bold text-transparent bg-clip-text bg-[linear-gradient(24deg,rgba(255,255,255,1)_40%,rgba(121,220,180,1)_100%)];
+    }
+
+    h2 {
+      @apply mt-2 text-xs text-center lg:text-base text-white/50;
+    }
+  }
 }
