@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useRef } from "react";
 
@@ -6,9 +6,11 @@ interface Props {
   animationClass?: string;
   once?: boolean;
   options?: IntersectionObserverInit;
+  onEnter?: () => void;
+  onLeave?: () => void;
 }
 
-function useScrollAnimation<T extends HTMLElement >({
+function useScrollAnimation<T extends HTMLElement>({
   animationClass = "animate-bounce",
   once = true,
   options = {
@@ -16,6 +18,8 @@ function useScrollAnimation<T extends HTMLElement >({
     root: null,
     rootMargin: "0px",
   },
+  onEnter,
+  onLeave,
 }: Props = {}) {
   const ref = useRef<T | null>(null);
 
@@ -25,9 +29,13 @@ function useScrollAnimation<T extends HTMLElement >({
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
+        onEnter?.();
+
         element.classList.add(animationClass);
         if (once) observer.unobserve(element);
       } else {
+        onLeave?.();
+
         // remove class in order to animation can re-run
         if (!once) element.classList.remove(animationClass);
       }
@@ -36,7 +44,7 @@ function useScrollAnimation<T extends HTMLElement >({
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, [animationClass, once, options]);
+  }, [animationClass, once, options, onEnter, onLeave]);
 
   return ref;
 }

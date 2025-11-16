@@ -67,12 +67,22 @@
       @apply flex-none mt-4 md:mt-8;
     }
   }
-  
+
   #features h3 {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2    whitespace-nowrap group-hover:-translate-y-12 transition-transform duration-500 uppercase;
   }
 
   #features p {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 text-center transition-transform duration-500 opacity-0 inline-flex w-full group-hover:opacity-100 group-hover:translate-y-5;
+  }
+
+  .best-product-info {
+    h3 {
+      @apply text-xl text-center font-semibold text-primary-900 md:text-2xl;
+    }
+  }
+
+  #best-sellers img {
+    @apply max-w-[600px] h-[250px] md:h-[70vh] max-h-[700px] rounded-tl-[50px] rounded-bl-[50px] object-cover;
   }
 }

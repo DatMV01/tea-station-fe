@@ -3,6 +3,7 @@ import TabsSlide from "./shared/TabsSlide";
 
 import Switch from "./ui/Switch";
 import FeatureCard from "./feature-card/FeatureCard";
+import ProgressBar from "./progress-bar/ProgressBar";
 
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
@@ -26,6 +27,7 @@ import TopSidebar from "./nav/TopSidebar";
 export {
   Switch,
   FeatureCard,
+  ProgressBar,
   Container,
   TabsSlide,
   ThemeButton,
