@@ -39,7 +39,7 @@ const TopSidebar = ({ style = "style1" }: Props) => {
             <li key={navLink.id}>
               <a
                 href={navLink.href}
-                className="navLink mobileNavLink text-primary-50 hover:text-primary-200"
+                className="text-base font-medium leading-none capitalize tracking-wide cursor-pointer text-white hover:text-primary-200"
               >
                 {navLink.label}
               </a>
@@ -47,8 +47,6 @@ const TopSidebar = ({ style = "style1" }: Props) => {
           ))}
         </ul>
       </nav>
-
-  
     </div>
   );
 };

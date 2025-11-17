@@ -1,7 +1,7 @@
 const navbarLinks = [
   {
     id: "products",
-    href: "./products.html",
+    href: "./#products",
     label: "Sản phẩm",
   },
   { id: "story", href: "./#story", label: "Giới Thiệu" },

@@ -21,9 +21,9 @@ const Divider = () => (
         y2="135"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" stop-opacity="0" />
-        <stop offset="0.494792" stop-color="white" />
-        <stop offset="1" stop-color="white" stop-opacity="0" />
+        <stop stopColor="white" stopOpacity={0} />
+        <stop offset="0.494792"  stopColor="white" />
+        <stop offset="1" stopColor="white" stopOpacity={0}  />
       </linearGradient>
     </defs>
     <line
@@ -32,7 +32,7 @@ const Divider = () => (
       x2="0.5"
       y2="135"
       stroke="url(#lineGradient)"
-      stroke-opacity="0.3"
+      strokeOpacity={0.3}
       fill="none"
     />
   </svg>

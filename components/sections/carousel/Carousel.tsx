@@ -26,8 +26,6 @@ export default function Carousel({
   showArrows = true,
   className = "",
 }: Props) {
-  console.log("Carousel render with slides:", slides);
-
   const [index, setIndex] = useState<number>(
     Math.min(Math.max(0, startIndex), Math.max(0, slides.length - 1))
   );

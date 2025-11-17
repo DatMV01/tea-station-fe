@@ -5,11 +5,11 @@ import { assets } from "@/constants";
 
 const LeftHeader = () => {
   return (
-    <Link href="/" className="relative flex w-full  items-center">
+    <Link href="/" className="relative flex w-full items-center">
       <Image
         alt="logo"
         src={assets.icons.logo}
-        className="w-16 h-16 rounded-full object-center  "
+        className="w-16 h-16 rounded-full object-center"
       />
       <p className="text-lg capitalize font-lobster text-primary-900">
         Tea Station
@@ -23,9 +23,9 @@ const Header = () => {
     <Container
       as="header"
       id="header"
-      className="fixed left-1/2 -translate-x-1/2 top-0 z-50"
+      className="fixed left-1/2 -translate-x-1/2 top-0 z-50 w-screen! p-0! m-0!"
     >
-      <div className="flex h-20 bg-white/50 px-4 items-center justify-between">
+      <div className="flex h-20 bg-primary-50 px-4 items-center justify-between">
         <LeftHeader />
 
         <NavBar />
